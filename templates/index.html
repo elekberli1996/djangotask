@@ -1,0 +1,57 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+   </head>
+<body>
+    <form  method="post">
+        {% csrf_token %}
+    
+        <div class="form-group">
+            <label for="{{form.ad.id_for_label}}">Ad</label>
+            
+            {{form.ad}}  
+         </div>
+        <div class="form-group">
+            <label for="{{form.soyad.id_for_label}}">Soyad</label>
+            {{form.soyad}} </div>
+       
+        <div class="form-group">
+            <label for="{{form.atatadi.id_for_label}}">ataadi</label>
+            {{form.ataadi}} </div>
+        <div class="form-group">
+            <label for="{{form.yas.id_for_label}}">Yas</label>
+            {{form.yas}}  </div>
+        
+
+        <div class="form-group">
+            <label for="{{form.tel.id_for_label}}">Tel</label>
+            {{form.tel}} </div>
+
+        <div class="form-group">
+            <label for="{{form.email.id_for_label}}">Email</label>
+            {{form.email}}   </div>
+
+        <div class="form-group">
+            <label for="{{form.unvan.id_for_label}}">Unvan</label>
+            {{form.unvan}}  </div>
+        <div class="form-group">
+            <label for="{{form.tehsil.id_for_label}}">Tehsil</label>
+            {{form.tehsil}}   </div>
+
+        <div class="form-group">
+            <label for="{{form.vezife.id_for_label}}">Vezife</label>
+            {{form.vezife}}  </div>
+        <div class="form-group">
+                <label for="{{form.isyeri.id_for_label}}">Isyeri</label>
+                {{form.isyeri}}  </div>
+        <button  class="btn btn-primary">ELave et</button>
+      </form>
+
+</body>
+</html>
+

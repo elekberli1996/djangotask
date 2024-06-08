@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+
+{% block body %}
+
+{% if users %}
+{% for user in users %}
+ <div>
+
+     <h3>{{user.ad}}</h3>
+     <h4>{{user.soyad}}</h4>
+     <a href="{% url 'detail' user.id %}"><button>Detail</button></a>
+     
+ 
+    
+   
+     
+ </div>
+{% endfor %}
+   
+{% else %}
+<p> Elan yoxdur</p>
+   
+{% endif %}
+
+
+{% endblock %}
